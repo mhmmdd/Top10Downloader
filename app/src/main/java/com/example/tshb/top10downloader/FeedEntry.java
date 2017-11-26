@@ -52,11 +52,11 @@ public class FeedEntry {
         this.imageUrl = imageUrl;
     }
 
-    @Override
-    public String toString() {
-        return "name='" + name + '\n' +
-                ", artist='" + artist + '\n' +
-                ", releaseDate='" + releaseDate + '\n' +
-                ", imageUrl='" + imageUrl + '\n';
-    }
+//    @Override
+//    public String toString() {
+//        return "name='" + name + '\n' +
+//                ", artist='" + artist + '\n' +
+//                ", releaseDate='" + releaseDate + '\n' +
+//                ", imageUrl='" + imageUrl + '\n';
+//    }
 }

@@ -46,7 +46,7 @@ public class ParseApplication {
                 String tagName = xpp.getName();
                 switch (eventType) {
                     case XmlPullParser.START_TAG:
-                        Log.d(TAG, "parse: Starting tag for " + tagName);
+//                        Log.d(TAG, "parse: Starting tag for " + tagName);
                         if("entry".equalsIgnoreCase(tagName)) {
                             inEntry = true;
                             currentRecord = new FeedEntry();
@@ -61,7 +61,7 @@ public class ParseApplication {
                         textValue = xpp.getText();
                         break;
                     case XmlPullParser.END_TAG:
-                        Log.d(TAG, "parse: Ending tag for " + tagName);
+//                        Log.d(TAG, "parse: Ending tag for " + tagName);
                         if(inEntry) {
                             if("entry".equalsIgnoreCase(tagName)) {
                                 applications.add(currentRecord);
@@ -85,10 +85,10 @@ public class ParseApplication {
                 }
                 eventType = xpp.next();
             }
-            for (FeedEntry application: applications) {
-                Log.d(TAG, "*******************");
-                Log.d(TAG, application.toString());
-            }
+//            for (FeedEntry application: applications) {
+//                Log.d(TAG, "*******************");
+//                Log.d(TAG, application.toString());
+//            }
 
         } catch (Exception e) {
             status = false;
